@@ -5,7 +5,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('pet_type', table => {
         table.increments();
-        table.string('name', 250)
+        table.string('name', 250);
     });
   
 };

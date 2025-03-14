@@ -1,0 +1,18 @@
+#MUST BE RUNNING IN THE UBUNTU TERMINAL TO CONNECT TO DOCKER
+EIther use Ubuntu or the terminal in vscode
+    docker ps -a
+
+#Create a new table in Docker through UBUNTU 
+    npx knex migrate:make NEW_TABLE_NAME
+
+#Work in the right table while logged into Docker(UBUNTU)
+    \c TABLE_NAME
+
+#Add new information to the table
+    npx knex migrate:latest
+
+#Remove the latest table updates
+    npx knex migrate:rollback
+
+#To create a seed run:
+    npx knex seed:make SEED_NAME_HERE
